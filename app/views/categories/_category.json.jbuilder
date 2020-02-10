@@ -1,1 +1,2 @@
-json.array! @categories, partial: "categories/category", as: :category
+json.extract! category, :id, :created_at, :updated_at
+json.url category_url(category, format: :json)
